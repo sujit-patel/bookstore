@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar'
 // import Book from './Components/Book'
 import Footer from './Components/Footer'
 import Banner from './Components/Banner'
+import Books from './Components/FreeBook'
 
 export class App extends Component {
   static propTypes = {}
@@ -11,9 +12,10 @@ export class App extends Component {
   render() {
     return (
       <>
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <Footer></Footer>
+      <Navbar />
+      <Banner />
+      <Books />
+      <Footer />
       </>
     )
   }

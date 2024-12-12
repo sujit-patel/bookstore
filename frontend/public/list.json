@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Story Book",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/children-school-open-book_1308-26353.jpg?t=st=1734032114~exp=1734035714~hmac=014d0519602798620739d1447f3317407385a755a3da7eec147d9ddea9652f14&w=740"
+    },
+    {
+        "id": 2,
+        "name": "Adventure Tales",
+        "title": "Embark on thrilling adventures with every chapter.",
+        "price": 10,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/cartoon-open-book_1308-88574.jpg?w=740&t=st=1734032202~exp=1734035802~hmac=582c5f2b709d6dbb742b20b1669b97e02f5f89b8b5b1688e4acde54c30ee8345"
+    },
+    {
+        "id": 3,
+        "name": "Science Wonders",
+        "title": "Discover the secrets of the universe in simple words.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/cartoon-stack-books_1308-31467.jpg?w=740&t=st=1734032253~exp=1734035853~hmac=716426ecab2bb88c00389da30aadb4b8b2e786f953de8f39a49b3f06300c5d8f"
+    },
+    {
+        "id": 4,
+        "name": "Art and Craft Guide",
+        "title": "Get creative with hands-on art and craft activities.",
+        "price": 15,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/flat-design-book-stack_23-2148801196.jpg?w=740&t=st=1734032298~exp=1734035898~hmac=1d7d6d2ab5aa106030cd20b7f09b63f8c4da196bff299d3cf2f90eb9a5d7d1c6"
+    },
+    {
+        "id": 5,
+        "name": "History Chronicles",
+        "title": "Dive into the chronicles of the past and learn history.",
+        "price": 8,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/book-pile-design_1308-105090.jpg?w=740&t=st=1734032345~exp=1734035945~hmac=bb8f24339b23bcb98fffb3070152a142739c41c187aa6d0c9b96dc4bb8e5a58d"
+    },
+    {
+        "id": 6,
+        "name": "Poetry Bliss",
+        "title": "Enjoy soothing poems to brighten your day.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/open-book-cartoon_1308-116233.jpg?w=740&t=st=1734032386~exp=1734035986~hmac=2e8c8e7cc33c5798fc3277e92f81296d89605d4dc4ab0b9533157f2632b3b4f6"
+    },
+    {
+        "id": 7,
+        "name": "Tech Essentials",
+        "title": "A guide to understanding technology and its impact.",
+        "price": 12,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/stack-books-concept_23-2148586946.jpg?w=740&t=st=1734032523~exp=1734036123~hmac=6938ec4f55a94653db6f7c4212b5d6075cfa6c7b993f7bc41e91ecabffbbf2c1"
+    },
+    {
+        "id": 8,
+        "name": "Health & Fitness",
+        "title": "Tips and tricks for a healthier lifestyle.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-stack-books_23-2148165644.jpg?w=740&t=st=1734032590~exp=1734036190~hmac=ddad70ac9272ac4ed6e6e8faac8eb7455a21abcf2bc7fc267f1e0baf526fdd05"
+    },
+    {
+        "id": 9,
+        "name": "Cooking Mastery",
+        "title": "Master the art of cooking with these amazing recipes.",
+        "price": 20,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/book-shelf-concept_23-2148586915.jpg?w=740&t=st=1734032653~exp=1734036253~hmac=6791bb1e7b301ae3637ef6d1f6d64602b5c6938347d3e27b01a7a38f73855056"
+    },
+    {
+        "id": 10,
+        "name": "Children's Tales",
+        "title": "Enchanting tales for young readers.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/open-book-with-nature_1308-79224.jpg?w=740&t=st=1734032718~exp=1734036318~hmac=a795d20b21b89d7cc03ac93e9490f02de99e23ebf27a98c1940b05026be3676a"
+    },
+    {
+        "id": 11,
+        "name": "Music Theory",
+        "title": "Learn the fundamentals of music and composition.",
+        "price": 18,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/abstract-open-book-concept_23-2148586942.jpg?w=740&t=st=1734032785~exp=1734036385~hmac=64cfd4b96b472db7b6539e7cddaa8471562e72594d3879e27cc3527abfe439b2"
+    },
+    {
+        "id": 12,
+        "name": "Meditation Guide",
+        "title": "Achieve peace and mindfulness with these techniques.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/realistic-open-book_1308-25783.jpg?w=740&t=st=1734032836~exp=1734036436~hmac=ed705db04a08b0ff5e372a2e8974a3657ff3305fcaa7df7e56d8e1d93e402f63"
+    },
+    {
+        "id": 13,
+        "name": "Travel Diaries",
+        "title": "Explore amazing places through captivating stories.",
+        "price": 22,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/books-set-realistic_1284-35452.jpg?w=740&t=st=1734032878~exp=1734036478~hmac=80be99b0d378b0c4323291b1967e6e5047afde292b1cf50cb46ebff29f228ac6"
+    },
+    {
+        "id": 14,
+        "name": "Language Learning",
+        "title": "Learn a new language with ease.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/stack-colorful-books-realistic_1284-47772.jpg?w=740&t=st=1734032928~exp=1734036528~hmac=30d85ecad5c2e1d6ad93e33d3fa05c631a725ea6c497b33748bb6dd89e6cda68"
+    },
+    {
+        "id": 15,
+        "name": "Entrepreneurship 101",
+        "title": "Learn how to build and grow your own business.",
+        "price": 25,
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/realistic-book-set-isolated_1284-35472.jpg?w=740&t=st=1734032973~exp=1734036573~hmac=c6c2a71b36d2a888a14b248792c6cb6ab017e19b4ed2836d0169938d8ac8dfe7"
+    }
+]

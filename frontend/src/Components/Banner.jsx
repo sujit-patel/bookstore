@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-// import banner from "../../public/Banner-books.png";
-// import banner from "../../public/Banner-img.jpg";
 import banner from "../../public/Banner img.png";
 
 export class Banner extends Component {
@@ -10,7 +8,7 @@ export class Banner extends Component {
   render() {
     return (
       <>
-        <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:my-24 flex flex-col md:flex-row">
+        <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:my-10 flex flex-col md:flex-row">
           {/* left side  */}
           <div className="md:w-1/2 order-2 md:order-1 w-full">
             <div className="space-y-12 mt-6">
