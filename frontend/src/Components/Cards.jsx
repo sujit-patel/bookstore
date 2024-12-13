@@ -35,7 +35,7 @@ export class Cards extends Component {
             <div className="badge badge-secondary badge-outline">
               ${items.price}
             </div>
-            <div className="badge cursor-pointer p-4 hover:text-white hover:bg-pink-500 textarea-sm">
+            <div className="badge cursor-pointer badge-outline p-4 hover:text-white hover:bg-pink-500 textarea-sm">
               Buy Now
             </div>
           </div>
