@@ -6,7 +6,7 @@ export class Footer extends Component {
 
   render() {
     return (
-      <>
+      <div className="px-20">
         <hr />
         <footer className="footer text-base-content md:px-20 px-4 py-10">
           <div className="flex flex-wrap justify-center md:grid md:grid-cols-3 gap-8">
@@ -74,7 +74,7 @@ export class Footer extends Component {
             </p>
           </div>
         </footer>
-      </>
+      </div>
     );
   }
 }

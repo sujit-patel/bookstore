@@ -1,24 +1,17 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Navbar from './Components/Navbar'
-// import Book from './Components/Book'
-import Footer from './Components/Footer'
-import Banner from './Components/Banner'
-import Books from './Components/FreeBook'
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Home from "./home/Home.jsx";
 
 export class App extends Component {
-  static propTypes = {}
+  static propTypes = {};
 
   render() {
     return (
       <>
-      <Navbar />
-      <Banner />
-      <Books />
-      <Footer />
+        <Home />
       </>
-    )
+    );
   }
 }
 
-export default App
+export default App;

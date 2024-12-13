@@ -39,21 +39,17 @@ const Navbar = () => {
 
   return (
     <div
-      className={`max-w-screen-2xl container rounded-md mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
+      className={`max-w-screen-2xl container z-50 rounded-md mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
         ${
           strick
-            ? "shadow-md bg-slate-800 duration-300 transition-all ease-in-out"
+            ? "shadow-md bg-base-200 duration-300 transition-all ease-in-out"
             : ""
         }`}
     >
       <div className="navbar items-center">
         <div className="navbar-start">
           <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost lg:hidden"
-            >
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -73,7 +69,12 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {navItem}
+              <div className="w-full space-y-2 p-2">
+                <div>{navItem}</div>
+                <div>
+                  <Search></Search>
+                </div>
+              </div>
             </ul>
           </div>
           <a className="font-bold text-xl">

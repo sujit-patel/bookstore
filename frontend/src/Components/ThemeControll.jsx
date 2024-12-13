@@ -51,4 +51,3 @@ export class ThemeControl extends Component {
 }
 
 export default ThemeControl;
-  

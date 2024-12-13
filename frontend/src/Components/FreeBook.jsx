@@ -31,7 +31,7 @@ const FreeBook = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
@@ -45,7 +45,8 @@ const FreeBook = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:my-10">
+    <div className="max-w-screen-2xl pl-10 pr-10 container mx-auto md:px-20 md:my-10">
+      <hr />
       <div>
         <h1 className="text-2xl font-semibold text-pink-500 py-5">
           Free Offered Courses
@@ -59,7 +60,7 @@ const FreeBook = () => {
 
       {/* Books Cart */}
       <div className="md:mt-10">
-        <div className="slider-container">
+        <div className="slider-container items-center">
           <Slider {...settings}>
             {filterData.map((items) => (
               <Cards items={items} key={items.id} />

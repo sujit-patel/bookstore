@@ -8,11 +8,7 @@ export class Search extends Component {
     return (
       <div>
         <label className="input bg-transparent input-bordered border-pink-500 flex items-center gap-2 p-1 text-sm">
-          <input
-            type="text"
-            className="  text-sm p-1"
-            placeholder="Search"
-          />
+          <input type="text" className="  text-sm p-1" placeholder="Search" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
