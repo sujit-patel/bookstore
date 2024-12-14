@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import Search from "./Search";
 import ThemeControll from "./ThemeControll";
+import Login from "./Login.jsx";
 
 const Navbar = () => {
   const [strick, setStrick] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`max-w-screen-2xl container z-50 rounded-md mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
+      className={`max-w-screen-2xl container z-30 rounded-md mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
         ${
           strick
             ? "shadow-md bg-base-200 duration-300 transition-all ease-in-out"
@@ -90,7 +91,8 @@ const Navbar = () => {
             <ThemeControll />
           </div>
           <div>
-            <a className="btn bg-transparent text-pink-500">Login</a>
+            <a onClick={()=>document.getElementById("my_modal_3").showModal()} className="btn bg-transparent text-pink-500">Login</a>
+            <Login></Login>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import list from "../../public/list.json";
 import Cards from "./Cards.jsx";
+import {Link} from 'react-router-dom';
 
 export class Course extends Component {
   static propTypes = {};
@@ -21,7 +22,9 @@ export class Course extends Component {
               magni quaerat voluptate similique est impedit, dolore laboriosam
               deserunt maiores sequi molestias?
             </p>
-            <button className="bg-pink-500 px-3 py-2 rounded-md text-white duration-300 ease-in-out hover:bg-pink-600">{`< Back`}</button>
+            <Link to={'/'}>
+            <button className="bg-pink-500 px-3 mt-10 py-2 rounded-md text-white duration-300 ease-in-out hover:bg-pink-600">{`< Back`}</button>
+            </Link>
             <div className="grid grid-cols-4">
               {/* <div className="w-48 flex space-x-5"> */}
                 {list.map((items) => (

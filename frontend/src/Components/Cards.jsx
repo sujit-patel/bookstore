@@ -15,7 +15,7 @@ export class Cards extends Component {
     const { items } = this.props;
 
     return (
-      <div className="card bg-base-100 w-11/12 mt-8 shadow-xl transition-transform hover:scale-110 ease-in-out duration-300">
+      <div className="card bg-base-100 w-11/12 mt-8 shadow-xl transition-transform hover:scale-105 ease-in-out duration-300">
         <figure className="">
           <img
             className="transition-transform hover:scale-110 ease-in-out duration-300"
