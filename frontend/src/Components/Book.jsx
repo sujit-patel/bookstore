@@ -1,14 +1,9 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Book extends Component {
-  static propTypes = {}
-
-  render() {
-    return (
-      <div>Book</div>
-    )
-  }
+function Book() {
+  return (
+    <div>Book</div>
+  )
 }
 
 export default Book

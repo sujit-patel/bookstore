@@ -30,12 +30,16 @@ function Contact() {
             <input type="email" className="grow" placeholder="Email" />
           </label>
           <textarea
-            type="text"
-            placeholder="Message"
-            className="input input-bordered h-auto flex items-center"
+            name="message"
+            placeholder="Enter your message here..."
+            className="input input-bordered h-28 py-2 rounded-md resize-none"
           />
-          <button type="submit"
-          className="btn bg-blue-500 hover:bg-blue-400 hover:text-white">Submit</button>
+          <button
+            type="submit"
+            className="btn bg-blue-900 hover:bg-blue-800 text-white"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>

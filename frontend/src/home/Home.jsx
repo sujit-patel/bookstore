@@ -1,21 +1,17 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Navbar from '../Components/Navbar'
-import Banner from '../Components/Banner'
-import Footer from '../Components/Footer'
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Banner from "../Components/Banner";
+import Footer from "../Components/Footer";
+import FreeBook from "../Components/FreeBook";
 
-export class Home extends Component {
-  static propTypes = {}
-
-  render() {
-    return (
-      <div>
-        <Navbar></Navbar>
-        <Banner></Banner>
-        <Footer></Footer>
-      </div>
-    )
-  }
+function Home() {
+  return (
+    <div>
+      <Navbar></Navbar>
+      <Banner></Banner>
+      <FreeBook></FreeBook>
+      <Footer></Footer>
+    </div>
+  );
 }
-
-export default Home
+export default Home;
