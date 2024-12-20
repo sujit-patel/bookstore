@@ -34,7 +34,7 @@ function Course() {
           <Link to={"/"}>
             <button className="bg-pink-500 px-3 mt-10 py-2 rounded-md text-white duration-300 ease-in-out hover:bg-pink-600">{`< Back`}</button>
           </Link>
-          <div className="grid grid-cols-4">
+          <div className="grid md:grid-cols-4 grid-cols-2 max-sm:grid-cols-1">
             {/* <div className="w-48 flex space-x-5"> */}
             {book.map((items) => (
               <Cards items={items} key={items.id}></Cards>
