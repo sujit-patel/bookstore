@@ -18,11 +18,6 @@ mongoose.connect(URI, {
     .then(() => console.log("Connected to MongoDB"))
     .catch((error) => console.log("Error connecting to MongoDB:", error));
 
-//define route
-app.get("/", (req, res) => {
-    res.send("Book Store app running");
-});
-
 app.use("/book", bookRoute)
 
 app.listen(PORT, () => {
