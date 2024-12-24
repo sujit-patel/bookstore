@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Home from "../home/Home.jsx";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const {
@@ -9,8 +11,27 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      username: data.username,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Signup Successfully...");
+        }
+        localStorage.setItem("User", JSON.stringify(res.data.user));
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error);
+          toast.error(error.response.data.message);
+        }
+      });
   };
 
   return (
