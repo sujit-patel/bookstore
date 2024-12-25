@@ -3,8 +3,10 @@ import { useForm } from "react-hook-form";
 import Home from "../home/Home.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom"; 
 
 const Signup = () => {
+  const navigate = useNavigate(); 
   const {
     register,
     handleSubmit,
@@ -23,8 +25,9 @@ const Signup = () => {
         console.log(res.data);
         if (res.data) {
           toast.success("Signup Successfully...");
+          localStorage.setItem("User", JSON.stringify(res.data.user));
+          navigate("/course");
         }
-        localStorage.setItem("User", JSON.stringify(res.data.user));
       })
       .catch((error) => {
         if (error.response) {
@@ -36,15 +39,12 @@ const Signup = () => {
 
   return (
     <div className="relative">
-      {/* Add Home component as background with blur effect */}
       <div className="absolute top-0 overflow-hidden -z-0 left-0 w-full h-screen">
         <Home />
       </div>
 
-      {/* Add a blurred background overlay */}
       <div className="absolute top-0 left-0 w-full h-screen bg-opacity-40 backdrop-blur-sm"></div>
 
-      {/* Modal content */}
       <div className="flex items-center justify-center w-full h-screen z-50">
         <div className="modal-box relative p-8 rounded-lg shadow-lg">
           <button

@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import Search from "./Search";
-import ThemeControll from "./ThemeControll";
 import Login from "./Login.jsx";
+import ThemeControll from "./ThemeControll.jsx";
+import Search from "./Search.jsx";
+import Logout from "./Logout.jsx";
+import { useAuth } from "../context/AuthProvider.jsx";
 
-const Navbar = () => {
+function Navbar() {
+  const [authUser, setAuthUser] = useAuth();
   const [strick, setStrick] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -14,7 +15,7 @@ const Navbar = () => {
       } else {
         setStrick(false);
       }
-    }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -37,7 +38,6 @@ const Navbar = () => {
       </li>
     </>
   );
-
   return (
     <div
       className={`max-w-screen-2xl container z-30 rounded-md mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 
@@ -78,7 +78,10 @@ const Navbar = () => {
               </div>
             </ul>
           </div>
-          <a className="font-bold text-xl">
+          <a
+            href="/"
+            className="font-bold text-xl hover:cursor-pointer hover:underline underline-offset-4 decoration-pink-400"
+          >
             Book <span className="text-pink-500">Store </span>
           </a>
         </div>
@@ -90,16 +93,25 @@ const Navbar = () => {
           <div>
             <ThemeControll />
           </div>
-          <div>
-            <a onClick={()=>document.getElementById("my_modal_3").showModal()} className="btn bg-transparent text-pink-500">Login</a>
-            <Login></Login>
-          </div>
+          {authUser ? (
+            <Logout />
+          ) : (
+            <div>
+              <a
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+                className="btn bg-transparent text-pink-500"
+              >
+                Login
+              </a>
+              <Login></Login>
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
-};
-
-Navbar.propTypes = {};
+}
 
 export default Navbar;

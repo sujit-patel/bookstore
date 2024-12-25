@@ -19,7 +19,7 @@ function Course() {
   }, []);
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:pb-0 md:my-10 flex flex-col md:flex-row">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 mt-10 md:pb-0 md:my-10 flex flex-col md:flex-row">
         <div className="text-center space-y-5">
           <h1 className="text-2xl font-semibold md:text-4xl">
             We're delighted to have you{" "}

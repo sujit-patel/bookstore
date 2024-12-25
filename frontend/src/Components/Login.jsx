@@ -21,8 +21,12 @@ const Login = () => {
         console.log(res.data);
         if (res.data) {
           toast.success("Login Successfully...");
+          setTimeout(() => {
+            document.getElementById("my_modal_3").close();
+            window.location.reload();
+            localStorage.setItem("User", JSON.stringify(res.data.user));
+          }, 1000);
         }
-        localStorage.setItem("User", JSON.stringify(res.data.user));
       })
       .catch((error) => {
         if (error.response) {

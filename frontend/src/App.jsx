@@ -1,28 +1,26 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom"; // Corrected import
+import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./home/Home.jsx";
 import Course from "./courses/Courses.jsx";
 import Signup from "./Components/Signup.jsx";
 import Contact from "./contacts/Contacts.jsx";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
+import { useAuth } from "./context/AuthProvider";
 
-export class App extends Component {
-  static propTypes = {};
-
-  render() {
-    return (
-      <>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/course" element={<Course />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/contact" element={<Contact />}></Route>
-        </Routes>
-        <Toaster />
-      </>
-    );
-  }
+function App() {
+  const [authUser, setAuthUser] = useAuth();
+  console.log(authUser);
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/course" element={authUser ? <Course /> : <Navigate to="/signup" />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+      <Toaster />
+    </>
+  );
 }
 
 export default App;

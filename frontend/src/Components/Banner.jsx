@@ -37,7 +37,7 @@ function Banner() {
         </div>
 
         {/* Right side  */}
-        <div className="md:w-1/2 items-center flex order-1 w-full">
+        <div className="md:w-1/2 items-center flex order-1">
           <img src={banner} className="scale-120" alt="Banner Img" />
         </div>
       </div>
