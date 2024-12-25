@@ -1,5 +1,9 @@
 # Bookstore
 
+## Project Code Structure
+
+https://github.com/user-attachments/assets/424edf15-21d2-4b8c-84d7-7798e51d37f8
+
 ## Home Page
 
 ![bookstore01](https://github.com/user-attachments/assets/7d68d2b9-8b7a-4992-bffc-89209666dba1)
