@@ -32,7 +32,7 @@ function Banner() {
                 <input type="text" className="grow" placeholder="Email" />
               </label>
             </div>{" "}
-            <button className="btn btn-outline btn-secondary">Secondary</button>
+            <button className="btn btn-outline btn-secondary">Get Started</button>
           </div>
         </div>
 
