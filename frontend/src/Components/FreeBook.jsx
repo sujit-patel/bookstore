@@ -11,8 +11,7 @@ const FreeBook = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-        const res = await axios.get(`${API_BASE_URL}/book`);
+        const res = await axios.get("http://localhost:4001/book");
         const data = res.data.filter((data) => data.category === "Free");
         console.log(data);
         setBook(data);
