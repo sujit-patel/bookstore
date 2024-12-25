@@ -15,25 +15,26 @@ const Login = () => {
       email: data.email,
       password: data.password,
     };
-    await axios
-      .post("http://localhost:4001/user/login", userInfo)
-      .then((res) => {
-        console.log(res.data);
-        if (res.data) {
-          toast.success("Login Successfully...");
-          setTimeout(() => {
-            document.getElementById("my_modal_3").close();
-            window.location.reload();
-            localStorage.setItem("User", JSON.stringify(res.data.user));
-          }, 1000);
-        }
-      })
-      .catch((error) => {
-        if (error.response) {
-          console.log(error);
-          toast.error(error.response.data.message);
-        }
-      });
+
+    try {
+      const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; 
+      const res = await axios.post(`${API_BASE_URL}/user/login`, userInfo);
+
+      console.log(res.data);
+      if (res.data) {
+        toast.success("Login Successfully...");
+        setTimeout(() => {
+          document.getElementById("my_modal_3").close();
+          window.location.reload();
+          localStorage.setItem("User", JSON.stringify(res.data.user));
+        }, 1000);
+      }
+    } catch (error) {
+      if (error.response) {
+        console.log(error);
+        toast.error(error.response.data.message);
+      }
+    }
   };
 
   return (
