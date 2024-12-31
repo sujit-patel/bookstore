@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../../public/Banner img.png";
 
 function Banner() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const xOffset = (clientX - window.innerWidth / 2) / 30; // Adjust factor for sensitivity
+    const yOffset = (clientY - window.innerHeight / 2) / 30;
+    setPosition({ x: xOffset, y: yOffset });
+  };
+
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:pb-0 md:my-10 flex flex-col md:flex-row">
-        {/* left side  */}
+      <div
+        className="max-w-screen-2xl container mx-auto md:px-20 p-10 md:pb-0 md:my-10 flex flex-col md:flex-row"
+        onMouseMove={handleMouseMove}
+      >
+        {/* Left side */}
         <div className="md:w-1/2 order-2 md:order-1 w-full">
           <div className="space-y-12 mt-6">
             <h1 className="md:text-5xl text-4xl font-bold">
@@ -32,13 +44,23 @@ function Banner() {
                 <input type="text" className="grow" placeholder="Email" />
               </label>
             </div>{" "}
-            <button className="btn btn-outline btn-secondary">Get Started</button>
+            <button className="btn btn-outline btn-secondary">
+              Get Started
+            </button>
           </div>
         </div>
 
-        {/* Right side  */}
+        {/* Right side */}
         <div className="md:w-1/2 items-center flex order-1">
-          <img src={banner} className="scale-120" alt="Banner Img" />
+          <img
+            src={banner}
+            className="scale-125 hover:cursor-pointer"
+            alt="Banner Img"
+            style={{
+              transform: `translate(${position.x}px, ${position.y}px)`,
+              transition: "transform 0.1s ease-out",
+            }}
+          />
         </div>
       </div>
     </>
