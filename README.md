@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/a568b197-92c6-4e95-b9fc-25a0203cad63
 # Bookstore
 
 ## Project Code Structure
