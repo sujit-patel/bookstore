@@ -4,6 +4,12 @@
 
 https://github.com/user-attachments/assets/424edf15-21d2-4b8c-84d7-7798e51d37f8
 
+## Interactive Banner with Mouse Movement Effect
+
+https://github.com/user-attachments/assets/257823f3-228b-49c5-9508-8414216a3680
+
+This React component creates a responsive banner with an interactive right-side image that moves based on the user's mouse position. The project demonstrates the use of state and event handling in React to achieve a smooth and engaging user experience.
+
 ## Home Page
 
 ![bookstore01](https://github.com/user-attachments/assets/7d68d2b9-8b7a-4992-bffc-89209666dba1)
