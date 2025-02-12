@@ -21,8 +21,8 @@ try {
     console.log(error)
 }
 
-app.use("/book", bookRoute)
-app.use("/user", userRoute)
+app.use("/api/book", bookRoute)
+app.use("/api/user", userRoute)
 
 app.listen(PORT, () => {
     console.log(`Your server is running at http://localhost:${PORT}`);

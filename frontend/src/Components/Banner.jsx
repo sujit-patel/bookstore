@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import banner from "../../public/Banner img.png";
+import banner from "../assets/Banner img.png";
 
 function Banner() {
   const [position, setPosition] = useState({ x: 0, y: 0 });

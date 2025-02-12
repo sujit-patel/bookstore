@@ -14,7 +14,6 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL; // Using environment variable
     const userInfo = {
       username: data.username,
       email: data.email,
@@ -22,13 +21,15 @@ const Signup = () => {
     };
 
     try {
-      const res = await axios.post(`${API_BASE_URL}/user/signup`, userInfo);
+      const res = await axios.post("/api/user/signup", userInfo);
       console.log(res.data);
 
       if (res.data) {
         toast.success("Signup Successfully...");
-        localStorage.setItem("User", JSON.stringify(res.data.user));
-        navigate("/course");
+        setTimeout(() => {
+          window.location.href = "/course";
+        }, 2000);
+        localStorage.setItem("User", JSON.stringify(res.data));
       }
     } catch (error) {
       if (error.response) {
@@ -64,6 +65,7 @@ const Signup = () => {
                 {...register("username", { required: "Username is required" })}
                 className="grow"
                 placeholder="Username"
+                name="username"
               />
             </label>
             {errors.username && (
@@ -77,6 +79,7 @@ const Signup = () => {
                 {...register("email", { required: "Email is required" })}
                 className="grow"
                 placeholder="Email"
+                name="email"
               />
             </label>
             {errors.email && (
@@ -90,6 +93,7 @@ const Signup = () => {
                 {...register("password", { required: "Password is required" })}
                 className="grow"
                 placeholder="Password"
+                name="password"
               />
             </label>
             {errors.password && (
