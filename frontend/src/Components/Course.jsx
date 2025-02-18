@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "./Cards.jsx";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import API_URL from "../api.js";
+import { API_URL } from "../api.js";
 function Course() {
   const [book, setBook] = useState([]);
   useEffect(() => {

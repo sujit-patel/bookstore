@@ -1,8 +1,8 @@
-import axios from "axios";
 import React from "react";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import API_URL from "../api.js"
+import { API_URL } from "../api.js"
 const Login = () => {
   const {
     register,

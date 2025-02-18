@@ -4,7 +4,7 @@ import Home from "../home/Home.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import API_URL from "../api.js"
+import { API_URL } from "../api.js"
 const Signup = () => {
   const navigate = useNavigate();
   const {
