@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-
+import API_URL from "../api.js"
 const Login = () => {
   const {
     register,
@@ -17,7 +17,7 @@ const Login = () => {
     };
 
     try {
-      const res = await axios.post("/api/user/login", userInfo);
+      const res = await axios.post(`${API_URL}/api/user/login`, userInfo);
       if (res.data) {
         toast.success("Login Successfully...");
         setTimeout(() => {

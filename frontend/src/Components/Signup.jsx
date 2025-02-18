@@ -4,7 +4,7 @@ import Home from "../home/Home.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-
+import API_URL from "../api.js"
 const Signup = () => {
   const navigate = useNavigate();
   const {
@@ -21,7 +21,7 @@ const Signup = () => {
     };
 
     try {
-      const res = await axios.post("/api/user/signup", userInfo);
+      const res = await axios.post(`${API_URL}/api/user/signup`, userInfo);
       console.log(res.data);
 
       if (res.data) {
