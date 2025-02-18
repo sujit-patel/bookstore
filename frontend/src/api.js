@@ -1,12 +1,6 @@
-const API_URL = import.meta.env.SERVER_URL;
+const API_URL = import.meta.env.VITE_SERVER_URL;
 
-export const fetchData = async (endpoint) => {
-  try {
-    const response = await fetch(`${API_URL}${endpoint}`);
-    if (!response.ok) throw new Error("API error");
-    return await response.json();
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return null;
-  }
-};
+fetch(`${API_URL}/api/book`)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error fetching data:", error));
