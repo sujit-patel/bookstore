@@ -10,7 +10,7 @@ app.use(cors({ origin: "https://bookstore-git-main-sujit-patels-projects.vercel.
 app.use(express.json());
 dotenv.config();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4001;
 const URI = process.env.md_URI;
 
 try {
