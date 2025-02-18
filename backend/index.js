@@ -15,7 +15,7 @@ const URI = process.env.md_URI;
 
 try {
     mongoose.connect(URI)
-    // mongoose.connect(URI, {useNewUrlParser: true,useUnifiedTopology: true,})
+    mongoose.connect(URI, {useNewUrlParser: true,useUnifiedTopology: true,})
     console.log("mongoDB Connected Successful");
 } catch (error) {
     console.log(error)

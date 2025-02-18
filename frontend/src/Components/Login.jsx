@@ -18,7 +18,6 @@ const Login = () => {
 
     try {
       const res = await axios.post("/api/user/login", userInfo);
-      console.log(res.data);
       if (res.data) {
         toast.success("Login Successfully...");
         setTimeout(() => {
@@ -26,6 +25,8 @@ const Login = () => {
           window.location.reload();
           localStorage.setItem("User", JSON.stringify(res.data.user));
         }, 2000);
+      } else {
+        toast.error("error");
       }
     } catch (error) {
       if (error.response) {
@@ -64,6 +65,7 @@ const Login = () => {
                   {...register("email", { required: "*Email is required" })}
                   className="grow"
                   placeholder="Email"
+                  name="email"
                 />
               </label>
               {errors.email && (
@@ -88,6 +90,7 @@ const Login = () => {
                   {...register("password", {
                     required: "* Password is required",
                   })}
+                  name="password"
                   className="grow"
                   placeholder="Password"
                 />
