@@ -6,7 +6,7 @@ import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://bookstore-git-main-sujit-patels-projects.vercel.app/" }));
 app.use(express.json());
 dotenv.config();
 
@@ -15,7 +15,7 @@ const URI = process.env.md_URI;
 
 try {
     mongoose.connect(URI)
-    mongoose.connect(URI, {useNewUrlParser: true,useUnifiedTopology: true,})
+    mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, })
     console.log("mongoDB Connected Successful");
 } catch (error) {
     console.log(error)
