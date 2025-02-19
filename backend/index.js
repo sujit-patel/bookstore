@@ -5,26 +5,36 @@ import cors from "cors";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 
-const app = express();
-app.use(cors({ origin: "https://bookstore-git-main-sujit-patels-projects.vercel.app/" }));
-app.use(express.json());
 dotenv.config();
+const app = express();
+
+const allowedOrigins = [
+  "http://localhost:5173", 
+  "https://bookstore-git-main-sujit-patels-projects.vercel.app" 
+];
+app.use(cors({ origin: allowedOrigins, credentials: true }));
+
+app.use(express.json());
 
 const PORT = process.env.PORT || 4001;
-const URI = process.env.md_URI;
+const URI = process.env.MONGODB_URI;
 
-try {
-    mongoose.connect(URI)
-    mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true, })
-    console.log("mongoDB Connected Successful");
-} catch (error) {
-    console.log(error)
-}
+const connectDB = async () => {
+  try {
+    await mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
+    console.log("MongoDB Connected Successfully");
+  } catch (error) {
+    console.error("MongoDB Connection Error:", error);
+    process.exit(1);
+  }
+};
+connectDB();
 
-app.use("/api/book", bookRoute)
-app.use("/api/user", userRoute)
+// Routes
+app.use("/api/book", bookRoute);
+app.use("/api/user", userRoute);
 
+// Start Server
 app.listen(PORT, () => {
-    console.log(`Your server is running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
-
