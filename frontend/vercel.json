@@ -1,15 +1,25 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://bookstore-d6t7.onrender.com/api/$1"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/old-route",
-      "destination": "/new-route",
-      "permanent": true
+      "src": "/api/(.*)",
+      "dest": "https://bookstore-d6t7.onrender.com/api/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
