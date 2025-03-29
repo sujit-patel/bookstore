@@ -4,7 +4,6 @@ import Home from "../home/Home.jsx";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL; 
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ const Signup = () => {
     };
 
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/user/signup`, userInfo);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/signup`, userInfo);
       console.log(res.data);
 
       if (res.data) {

@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL; 
 
 const Login = () => {
   const {
@@ -18,7 +17,7 @@ const Login = () => {
     };
     
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/user/login`, userInfo);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, userInfo);
       // const res = await axios.post("/api/user/login", userInfo);
       if (res.data) {
         toast.success("Login Successfully...");
