@@ -10,7 +10,7 @@ const app = express();
 
 const allowedOrigins = process.env.NODE_ENV === "development"
   ? "*"
-  : ["http://localhost:5173", "https://bookstore-sujit-patel.vercel.app/", "https://bookstore-git-main-sujit-patels-projects.vercel.app"];
+  : ["http://localhost:5173", "https://bookstore-sujit-patel.vercel.app", "https://bookstore-git-main-sujit-patels-projects.vercel.app"];
 
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());

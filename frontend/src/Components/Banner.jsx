@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import banner from "../assets/Banner img.png";
 
 function Banner() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -53,7 +52,7 @@ function Banner() {
         {/* Right side */}
         <div className="md:w-1/2 items-center flex order-1">
           <img
-            src={banner}
+            src="/assets/Banner img.png"
             className="scale-125 hover:cursor-pointer"
             alt="Banner Img"
             style={{
