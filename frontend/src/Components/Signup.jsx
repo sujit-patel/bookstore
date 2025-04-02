@@ -21,7 +21,7 @@ const Signup = () => {
     };
 
     try {
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/signup`, userInfo);
+      const res = await axios.post(`${import.meta.env.BACKEND_URL}/api/user/signup`, userInfo);
       console.log(res.data);
 
       if (res.data) {

@@ -8,7 +8,7 @@ function Course() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/book`);
+        const res = await axios.get(`${import.meta.env.BACKEND_URL}/api/book`);
         console.log(res.data);
         setBook(res.data);
       } catch (error) {

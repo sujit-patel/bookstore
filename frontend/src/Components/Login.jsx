@@ -17,7 +17,7 @@ const Login = () => {
     };
     
     try {
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, userInfo);
+      const res = await axios.post(`${import.meta.env.BACKEND_URL}/api/user/login`, userInfo);
       // const res = await axios.post("/api/user/login", userInfo);
       if (res.data) {
         toast.success("Login Successfully...");
