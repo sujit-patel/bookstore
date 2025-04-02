@@ -8,9 +8,10 @@ import userRoute from "./route/user.route.js";
 dotenv.config();
 const app = express();
 
+// Allow CORS based on environment
 const allowedOrigins = process.env.NODE_ENV === "development"
-  ? "*"
-  : ["http://localhost:5173", "https://bookstore-sujit-patel.vercel.app", "https://bookstore-git-main-sujit-patels-projects.vercel.app"];
+  ? process.env.FRONTEND_URL
+  : [process.env.PRODUCTION_FRONTEND_URL, process.env.ALTERNATE_FRONTEND_URL];
 
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
